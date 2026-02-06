@@ -60,8 +60,43 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-slate-950 text-white selection:bg-purple-500 selection:text-white">
       
+      {/* NAVBAR VE LOGO */}
+      <header className="fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-slate-950/80 backdrop-blur-md border-b border-slate-800/50">
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          className="flex items-center"
+        >
+          {/* 'B' HARFİ LOGOSU (SVG) */}
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-2">
+            <path d="M10 5H22C26.4183 5 30 8.58172 30 13C30 17.4183 26.4183 21 22 21H14M14 21H24C28.4183 21 32 24.5817 32 29C32 33.4183 28.4183 37 24 37H10V5Z" stroke="url(#paint0_linear)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+            <defs>
+              <linearGradient id="paint0_linear" x1="10" y1="5" x2="32" y2="37" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#60A5FA" /> {/* Mavi */}
+                <stop offset="1" stopColor="#A855F7" /> {/* Mor */}
+              </linearGradient>
+            </defs>
+            {/* Hafif bir dış parıltı efekti için filtre */}
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+              <feMerge>
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+            <path d="M10 5H22C26.4183 5 30 8.58172 30 13C30 17.4183 26.4183 21 22 21H14M14 21H24C28.4183 21 32 24.5817 32 29C32 33.4183 28.4183 37 24 37H10V5Z" stroke="url(#paint0_linear)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" filter="url(#glow)" opacity="0.6"/>
+          </svg>
+          {/* İsteğe bağlı: Yanına isim de yazabiliriz */}
+          {/* <span className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">Buğra</span> */}
+        </motion.div>
+        
+        {/* Navbar sağ tarafı (İstersen buraya menü linkleri de ekleyebiliriz) */}
+        <div></div> 
+      </header>
+
       {/* HERO SECTION */}
-      <section className="h-screen flex flex-col justify-center items-center text-center px-4 relative overflow-hidden">
+      <section className="h-screen flex flex-col justify-center items-center text-center px-4 relative overflow-hidden pt-20"> {/* pt-20 eklendi: navbar'ın altında kalmaması için */}
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-900 via-slate-950 to-black -z-10"></div>
         
         <motion.div
