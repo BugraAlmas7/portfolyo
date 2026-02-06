@@ -69,7 +69,7 @@ export default function Home() {
         >
           <h2 className="text-purple-400 font-mono text-xl mb-4">Hello, I'm [Ahmet Buğra Almas]</h2>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
-            Software & AI Engineer
+            Computer Engineer
           </h1>
           <p className="max-w-2xl mx-auto text-slate-400 text-lg mb-8 leading-relaxed">
             I solve complex problems with modern technologies. 
