@@ -1,12 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
+// Image importunu ekledim
+import Image from "next/image";
 import { FaGithub, FaLinkedin, FaRobot, FaBrain, FaCode, FaTerminal, FaExternalLinkAlt, FaGlobeAmericas, FaEnvelope } from "react-icons/fa";
 
 export default function Home() {
   
-  // --- KİŞİSEL BİLGİLERİN (BURAYI GÜNCELLE) ---
-  const myEmail = "BugraAlmas@hotmail.com"; // <-- MAİLİNİ BURAYA YAZ
+  // --- KİŞİSEL BİLGİLERİN ---
+  const myEmail = "BugraAlmas@hotmail.com"; 
   const myGithub = "https://github.com/BugraAlmas7";
   const myLinkedin = "https://www.linkedin.com/in/ahmet-bu%C4%9Fra-almas-082233260";
 
@@ -66,7 +68,19 @@ export default function Home() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          className="flex flex-col items-center" // Fotoğrafı ortalamak için ekledim
         >
+          {/* FOTOĞRAF KISMI BURADA */}
+          <div className="relative w-40 h-40 mb-8 rounded-full border-4 border-purple-500/30 shadow-[0_0_30px_rgba(168,85,247,0.4)] overflow-hidden">
+            <Image 
+              src="/ben.jpg" 
+              alt="Ahmet Buğra Almas" 
+              fill 
+              className="object-cover"
+              priority
+            />
+          </div>
+
           <h2 className="text-purple-400 font-mono text-xl mb-4">Hello, I'm [Ahmet Buğra Almas]</h2>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
             Computer Engineer
@@ -79,7 +93,6 @@ export default function Home() {
           <div className="flex justify-center gap-6">
             <motion.a whileHover={{ scale: 1.1 }} href={myGithub} target="_blank" className="text-3xl hover:text-white text-slate-400 transition-colors"><FaGithub /></motion.a>
             <motion.a whileHover={{ scale: 1.1 }} href={myLinkedin} target="_blank" className="text-3xl hover:text-white text-slate-400 transition-colors"><FaLinkedin /></motion.a>
-            {/* MAIL IKONU EKLENDI */}
             <motion.a whileHover={{ scale: 1.1 }} href={`mailto:${myEmail}`} className="text-3xl hover:text-white text-slate-400 transition-colors"><FaEnvelope /></motion.a>
           </div>
         </motion.div>
@@ -176,7 +189,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* YENİ EKLENEN: CONTACT SECTION */}
+      {/* CONTACT SECTION */}
       <section className="py-20 text-center">
         <h2 className="text-3xl font-bold mb-6">Get In Touch</h2>
         <p className="text-slate-400 mb-8 max-w-xl mx-auto">
