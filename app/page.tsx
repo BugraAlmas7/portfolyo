@@ -47,8 +47,7 @@ export default function Home() {
   // TEKNİK YETENEKLER
   const skills = [
     "Python", "C++", "ROS", "Unity", 
-    "Unreal Engine", "PyTorch", "LangChain", 
-    "Docker", "Linux/Ubuntu", "SQL"
+    "Unreal Engine", "Linux/Ubuntu", "SQL"
   ];
 
   // DİLLER
