@@ -47,7 +47,7 @@ export default function Home() {
   // TEKNİK YETENEKLER
   const skills = [
     "Python", "C++", "ROS", "Unity", 
-    "Unreal Engine", "Linux/Ubuntu", "SQL"
+    "Unreal Engine", "Linux/Ubuntu", "SQL", "Flutter & Dart"
   ];
 
   // DİLLER
